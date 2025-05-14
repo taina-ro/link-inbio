@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Airzup | Agência de Viagens</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      text-align: center;
+      color: #1c2e4a;
+    }
+
+    .header {
+      background-image: url('https://images.unsplash.com/photo-1584697964230-0f0f20b9f44d?fit=crop&w=900&q=80');
+      background-size: cover;
+      background-position: center;
+      padding: 40px 20px 20px;
+    }
+
+    .logo {
+      background: white;
+      border-radius: 50%;
+      padding: 15px;
+      width: 100px;
+      margin: 0 auto;
+    }
+
+    .logo img {
+      width: 100%;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 15px 0 5px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #5a6b85;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: block;
+      margin: 10px auto;
+      width: 80%;
+      max-width: 300px;
+      padding: 12px;
+      border-radius: 5px;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-outline {
+      border: 2px solid #1c2e4a;
+      color: #1c2e4a;
+      background-color: white;
+    }
+
+    .btn-outline:hover {
+      background-color: #e6e6e6;
+    }
+
+    .btn-whatsapp {
+      background-color: #25D366;
+      color: white;
+      border: none;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1ebf5d;
+    }
+
+    .email-icon {
+      font-size: 24px;
+      margin: 30px 0;
+      display: inline-block;
+      color: #1c2e4a;
+    }
+
+    .footer {
+      font-size: 14px;
+      border-top: 1px solid #ccc;
+      padding: 15px;
+      margin-top: 40px;
+      color: #5a6b85;
+    }
+
+    #aboutModal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    #aboutModalContent {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      text-align: left;
+      color: #333;
+    }
+
+    #closeModal {
+      float: right;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/480px-No_image_available.svg.png" alt="Logo Airzup">
+    </div>
+  </div>
+
+  <h1 class="title">Airzup</h1>
+  <p class="subtitle">Agência de Viagens</p>
+
+  <a class="btn btn-outline" href="#" onclick="openModal()">QUEM SOMOS</a>
+  <a class="btn btn-outline" href="https://instagram.com/air.zup" target="_blank">INSTAGRAM</a>
+  <a class="btn btn-whatsapp" href="https://wa.me/+5534998370212" target="_blank">💬 ORÇAMENTO</a>
+  
+  <a class="email-icon" href="mailto:airzup.oficial@gmail.com">📧</a>
+
+  <div class="footer">
+    SEU SONHO, NOSSO DESTINO
+  </div>
+
+  <div id="aboutModal">
+    <div id="aboutModalContent">
+      <span id="closeModal" onclick="closeModal()">&times;</span>
+      <p><strong>Somos uma agência de viagens que nasceu com a missão de transformar planos em embarques reais.</strong></p>
+      <p>Nosso trabalho é oferecer soluções completas para viagens nacionais e internacionais, conectando pessoas aos seus destinos com eficiência, segurança e atendimento humanizado.</p>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('aboutModal').style.display = 'block';
+    }
+    function closeModal() {
+      document.getElementById('aboutModal').style.display = 'none';
+    }
+    window.onclick = function(event) {
+      if (event.target == document.getElementById('aboutModal')) {
+        closeModal();
+      }
+    }
+  </script>
+
+</body>
+</html>
